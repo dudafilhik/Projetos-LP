@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulário | Encomenda Amigurumi</title>
+
+    <style>
+        body {
+            background-color: #d9f8e369;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #c0ffd469;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #13351e;
+        }
+
+        p {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border: 1px solid #13351e;
+            box-shadow: 0 0 4px rgba(19, 53, 30, 0.3);
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: block;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 18px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .submit-btn {
+            background-color: #13351e;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #3a5342;
+            transform: translateY(5px);
+        }
+
+        .reset-btn {
+            background-color: #ddd;
+        }
+
+        .reset-btn:hover {
+            background-color: #bbb;
+            transform: translateY(5px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Encomenda de Amigurumi</h1>
+
+        <p>
+            Conte um pouco sobre o amigurumi que você imagina!
+            Cada peça é feita à mão com muito cuidado 💚
+        </p>
+
+        <form method="post" action="#">
+
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+
+            <label for="data">Data desejada para entrega</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="senha">
+                Crie uma senha para acompanhar o status do pedido
+            </label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="tipo">Estilo do amigurumi</label>
+
+            <select name="tipo" id="tipo">
+
+                <option value="animal">Animal</option>
+
+                <option value="personagem">Personagem</option>
+
+                <option value="boneco">Boneco personalizado</option>
+
+                <option value="chaveiro">Chaveiro</option>
+
+            </select>
+
+            <label>Tamanho</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="tamanho" value="pequeno">
+                    Pequeno (até 10 cm)
+                </label>
+
+                <label>
+                    <input type="radio" name="tamanho" value="medio">
+                    Médio (11 a 18 cm)
+                </label>
+
+                <label>
+                    <input type="radio" name="tamanho" value="grande">
+                    Grande (acima de 18 cm)
+                </label>
+
+            </div>
+
+            <label>Detalhes desejados</label>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox" name="detalhes" value="roupa">
+                    Roupa personalizada
+                </label>
+
+                <label>
+                    <input type="checkbox" name="detalhes" value="cores">
+                    Cores específicas
+                </label>
+
+                <label>
+                    <input type="checkbox" name="detalhes" value="bordado">
+                    Detalhes bordados
+                </label>
+
+                <label>
+                    <input type="checkbox" name="detalhes" value="acessorios">
+                    Acessórios (chapéu, bolsa, laço, etc.)
+                </label>
+
+            </div>
+
+            <label for="arquivo">Imagem de inspiração</label>
+            <input type="file" id="arquivo" name="arquivo">
+
+            <label for="descricao">
+                Descreva sua ideia
+            </label>
+
+            <p>Exemplos: cores específicas, expressão do personagem,
+                roupa, acessórios, tamanho, etc.</p>
+
+            <textarea id="descricao" name="descricao" rows="4"></textarea>
+
+            <div class="button-group">
+
+                <button type="submit" class="submit-btn">
+                    Enviar pedido
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Limpar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
